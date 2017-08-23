@@ -3,16 +3,16 @@ const mongoose = require('mongoose');
 
 const characterSchema = new mongoose.Schema({
     name: { type: String, required: true, unique: true },
-    house: { type: String, required: true },
-    animagus: {type: Boolean}
-    organizations: [{
-        dumbledoresArmy: { type: Boolean },
-        orderOfPhoenix: { type: Boolean },
-        deathEater: { type: Boolean }
-    }],
+    house: { type: String },
+    animagus: {type: String}
+    // organization: [{
+    //     dumbledoresArmy: { type: Boolean },
+    //     orderOfPhoenix: { type: Boolean },
+    //     deathEater: { type: Boolean }
+    // }],
 
 })
 
-const Characters = characterTemplate.model('Characters', characterSchema);
+const CharacterTemplate = mongoose.model('CharacterTemplate', characterSchema);
 
-module.exports = characterTemplate;
+module.exports = CharacterTemplate;
