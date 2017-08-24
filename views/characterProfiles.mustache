@@ -11,6 +11,7 @@
     <!-- //name -->
 <form class="characterinfo" action="/" method="post">
   <input type="text" name="name" placeholder="name">
+  <input type="text" name="house" placeholder="house">
   <input type="submit" name="button" placeholder="add">
 </form>
 
@@ -19,7 +20,7 @@
   <li>
     <form class="delete" action="/{{_id}}" method="post">
       <button type="submit" name="button">delete</button>
-    </form> {{name}}
+    </form> {{name}} - {{house}}
   </li>
   {{/characters}}
 </ul>

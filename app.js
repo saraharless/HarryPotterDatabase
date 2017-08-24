@@ -34,8 +34,10 @@ console.log('hello')
 
 app.post('/', function(req, res) {
   let name = req.body.name
+  let house = req.body.house
   const naming = new characterTemplate({
-    name: name
+    name: name,
+    house: house
   })
 
   naming.save().then(function(results) {
