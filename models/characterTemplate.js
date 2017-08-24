@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 const characterSchema = new mongoose.Schema({
-    name: { type: String, required: true, unique: true },
+    name: { type: String },
     house: { type: String },
     animagus: {type: String}
     // organization: [{
@@ -13,6 +13,6 @@ const characterSchema = new mongoose.Schema({
 
 })
 
-const CharacterTemplate = mongoose.model('CharacterTemplate', characterSchema);
+const alohomara = mongoose.model('characterTemplate', characterSchema);
 
-module.exports = CharacterTemplate;
+module.exports = alohomara;

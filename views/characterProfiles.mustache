@@ -7,28 +7,22 @@
   <body>
     <h1>Directory of Wizards</h1>
 
-    //name
-    <form class="addcharacter" action="/{{name}}" method="post">
-    </form>
-    <p>
-    <button type="submit" name="button">Add To Directory</button>
-    {{name}}</p>
 
-    //house
-    <form class="addcharacter" action="/{{house}}" method="post">
-    </form>
-    <p>
-    <button type="submit" name="button">Add To Directory</button>
-    {{house}}</p>
+    <!-- //name -->
+<form class="characterinfo" action="/" method="post">
+  <input type="text" name="name" placeholder="name">
+  <input type="submit" name="button" placeholder="add">
+</form>
 
-    ////animagus
-    <form class="addcharacter" action="/{{aimagus}}" method="post">
-    </form>
-    <p>
-    <button type="submit" name="button">Add To Directory</button>
-    {{animagus}}</p>
-
-    //organizations
+<ul>
+  {{#characters}}
+  <li>
+    <form class="delete" action="/{{_id}}" method="post">
+      <button type="submit" name="button">delete</button>
+    </form> {{name}}
+  </li>
+  {{/characters}}
+</ul>
 
   </body>
 </html>
